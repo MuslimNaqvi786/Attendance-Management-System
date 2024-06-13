@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="userdashboardstyle.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome, <span id="username"></span></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link" id="nav-mark-attendance">Mark Attendance</a></li>
+            <li><a href="#" class="nav-link" id="nav-view-attendance">View Attendance</a></li>
+            <li><a href="#" class="nav-link" id="nav-mark-leave">Mark Leave</a></li>
+            <li><a href="#" class="nav-link" id="nav-profile-picture">Profile Picture</a></li>
+            <li><img id="nav-profile-img" class="nav-profile-picture" src="" alt="Profile Picture"></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="dynamic-content" class="content-container">
+            <h2 class="welcome-heading">Welcome</h2>
+            <p class="welcome-text">First mark your attendance for today</p>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 User Dashboard.
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

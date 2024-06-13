@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+}
+
+header {
+    background-color: #38d39f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav-link {
+    flex: 1;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #38d39f;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    /* flex: 3; */
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #38d39f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav-link {
+        margin-bottom: 10px;
+    }
+
+    .nav-link:last-child {
+        margin-bottom: 0;
+    }
+}
+
+main {
+    background-color: white;
+    padding: 1rem;
+    flex: 1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#dynamic-content {
+    margin-top: 1rem;
+}
+
+.content-container {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.content-container2 {
+    text-align: center;
+}
+
+.welcome-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.welcome-text {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .welcome-heading {
+        font-size: 20px;
+    }
+
+    .welcome-text {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .welcome-heading {
+        font-size: 18px;
+    }
+
+    .welcome-text {
+        font-size: 12px;
+    }
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.color-button {
+    background-color: #38d39f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.red-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.red-button:hover {
+    background-color: #e60000;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    .profile-picture {
+        width: 40px;
+        height: 40px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    table {
+        font-size: 12px;
+    }
+
+    .profile-picture {
+        width: 30px;
+        height: 30px;
+    }
+
+    th,
+    td {
+        padding: 4px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    table {
+        font-size: 10px;
+    }
+
+    .profile-picture {
+        width: 25px;
+        height: 25px;
+    }
+
+    th,
+    td {
+        padding: 3px;
+    }
+
+    th,
+    td,
+    button {
+        font-size: 10px;
+    }
+}
+
+
+#report-filters,
+#system-report-filters,
+#grade-settings {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+button {
+    background-color: #38d39f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.users-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.user-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+.user-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+}
+
+.user-card p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.delete-user {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-user:hover {
+    background-color: #d32f2f;
+}
+
+
+.styled-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.styled-filters label {
+    font-weight: bold;
+}
+
+.styled-filters input[type="date"],
+.styled-filters select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#system-report-filters h2,
+#report-filters h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.generate-btn {
+    background-color: #38d39f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+    background-color: #30b88b;
+}
+
+.attendance-report,
+.system-report {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+}
+
+.attendance-report h2,
+.system-report h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.system-report p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #343a40;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto;
+    /* Ensure the table itself is scrollable */
+}
+
+.styled-table thead tr {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #343a40;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .styled-filters {
+        padding: 10px;
+    }
+
+    .styled-filters label,
+    .styled-filters input[type="date"],
+    .styled-filters select,
+    .styled-filters button {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .styled-filters {
+        padding: 5px;
+    }
+
+    .styled-filters label,
+    .styled-filters input[type="date"],
+    .styled-filters select,
+    .styled-filters button {
+        width: 100%;
+        padding: 5px;
+        margin: 3px 0;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Make table scrollable */
+    .attendance-report,
+    .system-report {
+        overflow-x: auto;
+    }
+
+    .styled-table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        /* Prevent cells from wrapping */
+    }
+}
+
+#grade-settings {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+}
+
+#grade-settings h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#grade-settings label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#grade-settings input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
